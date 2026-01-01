@@ -79,3 +79,11 @@ sudo systemctl status mysql
 
 
 Se aparecer active (running), está tudo certo ✅
+
+
+
+
+Inicia o PHP:
+php -v
+Executar Arquivo:
+php arquivo.php
