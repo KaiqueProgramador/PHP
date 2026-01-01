@@ -1,0 +1,15 @@
+{
+    "name": "kaique/php-curso",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kaique",
+            "email": "09990kaique@gmail.com"
+        }
+    ],
+    "require": {}
+}

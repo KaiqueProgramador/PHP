@@ -1,0 +1,81 @@
+php -S localhost:8000 -t public
+
+
+Instalação composer:
+
+1 - Instalar PHP
+sudo apt update && sudo apt install php-cli php-zip unzip -y
+
+2 - Instalar Composer
+sudo apt install composer -y
+
+3 - Criar a pasta do projeto
+mkdir meu-projeto && cd meu-projeto
+
+4 - Criar o composer.json
+composer init
+
+5 - vendor e composer.lock
+composer install
+
+Instalação do Mysql
+
+1️⃣ Atualizar o sistema
+sudo apt update && sudo apt upgrade -y
+
+2️⃣ Instalar MySQL (servidor + cliente)
+sudo apt install mysql-server mysql-client -y
+
+3️⃣ Iniciar e habilitar o MySQL
+sudo systemctl start mysql
+sudo systemctl enable mysql
+
+
+Verificar se está rodando:
+
+sudo systemctl status mysql
+
+4️⃣ Instalar dependência do PHP para MySQL (PDO)
+
+ESSENCIAL para funcionar new PDO(...)
+
+sudo apt install php-mysql -y
+
+5️⃣ Reiniciar o servidor web (se usar Apache)
+sudo systemctl restart apache2
+
+6️⃣ Testar acesso ao MySQL
+sudo mysql
+
+
+Se entrar e aparecer:
+
+mysql>
+
+
+✅ Está funcionando.
+
+✅ Regra geral
+
+👉 Você NÃO precisa iniciar toda vez.
+
+O MySQL já inicia automaticamente quando o sistema liga.
+
+Quando usar cada comando
+🔹 Entrar no MySQL
+sudo mysql
+
+
+Use sempre que quiser acessar o banco (criar tabelas, bancos, etc).
+
+🔹 Iniciar o MySQL (só se estiver parado)
+sudo systemctl start mysql
+
+
+Use apenas se o MySQL não estiver rodando.
+
+🔹 Verificar se está rodando
+sudo systemctl status mysql
+
+
+Se aparecer active (running), está tudo certo ✅
